@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Anniversary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+
+    <canvas id="heartCanvas" aria-hidden="true"></canvas>
+
+    <header class="hero" id="home">
+      <nav class="top-nav">
+        <div class="brand">Our Love Story</div>
+        <a href="#surprise" class="nav-btn">Buka Kejutan</a>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">Happy Anniversary</p>
+        <h1>Untuk Kamu, Cinta Terindahku</h1>
+        <p class="subtitle" id="typedText"></p>
+        <div class="hero-actions">
+          <a href="#timeline" class="btn btn-primary">Lihat Cerita Kita</a>
+          <button class="btn btn-glass" id="playMusicBtn">Putar Lagu</button>
+        </div>
+      </div>
+
+      <div class="scroll-hint">Scroll perlahan, ada banyak kenangan di sini</div>
+    </header>
+
+    <main>
+      <section class="section section-story" id="timeline">
+        <div class="section-head reveal">
+          <p class="eyebrow">Cerita Kita</p>
+          <h2>Perjalanan yang sangat menyenangkan</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="card reveal">
+            <span class="dot"></span>
+            <h3>Awal Bertemu</h3>
+            <p>
+              Pertama kali mau ketemu, aku tidak tahu bahwa hari itu akan menjadi awal dari cerita cinta yang paling indah.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="dot"></span>
+            <h3>First Date</h3>
+            <p>
+              Kita ngobrol sampai lupa waktu, dan sejak itu aku tahu: kamu adalah tempat yang paling nyaman untukku.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="dot"></span>
+            <h3>Hari Ini</h3>
+            <p>
+              Aku tidak pernah menyangka bahwa kamu masih mau bersamaku. Happy anniversary, cintaku.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-gallery">
+        <div class="section-head reveal">
+          <p class="eyebrow">Moments</p>
+          <h2>Potongan Kenangan Manis</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="photo-card reveal" style="--photo-url: url('gambar/foto-1-kita.jpeg');"><span>Kita</span></div>
+          <div class="photo-card reveal" style="--photo-url: url('gambar/foto-2-tawa.jpeg');"><span>Tawa</span></div>
+          <div class="photo-card reveal" style="--photo-url: url('gambar/foto-3-cerita.jpeg');"><span>Cerita</span></div>
+          <div class="photo-card reveal" style="--photo-url: url('gambar/foto-4-janji.jpeg');"><span>Janji</span></div>
+        </div>
+      </section>
+
+      <section class="section section-countdown" id="surprise">
+        <div class="countdown-card reveal">
+          <p class="eyebrow">Special Counter</p>
+          <h2>Waktu Bersama Kita</h2>
+          <p class="subtitle-small">Tanggal Jadian:</p>
+          <div class="counter" id="loveCounter">0 hari</div>
+          <button class="btn btn-primary" id="showLetterBtn">Buka Surat Cinta</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="letterModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="close-btn" id="closeModalBtn" aria-label="Tutup">x</button>
+        <p class="eyebrow">Untuk Kamu</p>
+        <h3>Surat Kecil dari Hatiku</h3>
+        <p>
+          Terima kasih karena selalu jadi alasan aku pulang dengan senyum. Aku mungkin tidak sempurna,
+          tapi aku selalu ingin belajar mencintaimu lebih baik setiap hari.
+        </p>
+        <p>
+          Semoga hari ini bukan hanya perayaan tanggal, tapi perayaan tentang kita yang terus tumbuh
+          jadi cerita paling indah.
+        </p>
+        <p class="signature">Selamanya, Aku.</p>
+      </div>
+    </div>
+
+    <audio id="bgMusic" loop autoplay preload="auto">
+      <source src="lagu/Sorai - Nadin Amizah _ Lirik Lagu (320).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
